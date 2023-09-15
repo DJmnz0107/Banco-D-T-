@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simulación de cajero Automático</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="p-3 mb-2 bg-ligh text-dark">
+    <nav class="navbar bg-body-secondary nav justify-content-center">
+        <h1 class="display-1 align-text-top text-center">Banco D&T</h1><img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30160306/447.png" class="img-fluid" alt="Logo" width="200" height="194">
+      </nav>
+    <div class="container mt-5">
+        <h1>Bienvenido al banco D&T, realiza tus gestiones de retiro de efectivo en los siguientes campos:</h1>      
+        <form id="form">  
+        <div class="form-group">
+          <label for="cliente">Nombre del tramitante:</label>
+          <input type="text" class="form-control" id="cliente" placeholder="Ingresa tu nombre" form="form">
+          <label for="billetesARetirar">Cantidad a retirar en dólares americanos (USD) $:</label>
+          <input type="number" class="form-control" id="billetesARetirar" placeholder="Ingresa la cantidad de dinero ($)" form="form">
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-outline-success btn-lg" onclick="cajeroAutomático()">Retirar efectivo</button>
+        <button  type="reset" class="btn btn-outline-danger btn-lg ml-3" onclick="limpiarCampos()">Limpiar campos</button>
+      </div>
+    </form>
+        <div id="totalBilletes" class="mt-4"></div>
+    </div>
+    <script src="js/Billetes.js"></script>
+    <footer class="bg-white text-dark text-center py-3 mt-5">
+      <p>&copy; 2023 - Todos los derechos reservados</p>
+      <p>Proyecto Tecnologico de Desarrollo de Páginas Web | Diego Josué Jiménez Alas | Thomás Alexander Galdámez Palomares</p>
+    </footer>
+</body>
+</html>
